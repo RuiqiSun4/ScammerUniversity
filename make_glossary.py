@@ -21,3 +21,6 @@ df = pd.DataFrame(data)
 
 # Save as CSV
 df.to_csv("nba_stat_glossary.csv", index=False)
+
+# Added comment for clarity.
+# This script generates a glossary for NBA stat abbreviations.
