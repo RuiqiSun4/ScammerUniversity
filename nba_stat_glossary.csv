@@ -1,0 +1,13 @@
+Abbreviation,Full Name,Description
+G,Games Played,Total number of games played by the player
+MP,Minutes Played,Total minutes played
+PTS,Points,Total points scored
+TRB,Total Rebounds,Total number of rebounds
+AST,Assists,Total number of assists
+FG%,Field Goal Percentage,Field goal success rate
+3P%,Three-Point Percentage,Three-point shot success rate
+FT%,Free Throw Percentage,Free throw success rate
+WS,Win Shares,Estimated contribution to team wins
+WS/48,Win Shares per 48 Minutes,Win contribution per 48 minutes
+BPM,Box Plus/Minus,Impact compared to an average player (± scale)
+VORP,Value Over Replacement Player,Value compared to a replacement-level player (higher is better)
