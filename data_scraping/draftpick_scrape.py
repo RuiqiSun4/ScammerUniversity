@@ -65,7 +65,7 @@ def main():
             all_drafts.append(draft_df)
             
         # Pause for a short duration (60 second) between requests to prevent overwhelming the server.
-        time.sleep(1)
+        time.sleep(60)
 
     # Concatenate all the yearly DataFrames into a single one.
     if all_drafts:
