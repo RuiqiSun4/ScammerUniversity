@@ -55,8 +55,6 @@ def clean_nba_draft_data(input_path, output_path):
     # Group players (6 groups)
     bins = [0, 10, 20, 30, 40, 50, float('inf')]  # 0~10, 11~20, ... , 51~
     labels = [1, 2, 3, 4, 5, 6]
-
-    # pandas.cut 함수로 'Pk' 값을 기준으로 그룹을 나눕니다.
     df['Group'] = pd.cut(df['Pk'], bins=bins, labels=labels, right=True)
 
     # 5. Save the cleaned DataFrame to a new CSV file.
