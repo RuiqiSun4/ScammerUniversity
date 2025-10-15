@@ -52,7 +52,10 @@ def analyze_every_player(input_path):
 
     axes[0, 1].set_ylim(-0.5, 0.5)
     axes[1, 0].set_ylim(-20, 20)
-
+    axes[0, 0].set_xlim(1, 60)
+    axes[1, 0].set_xlim(1, 60)
+    axes[0, 1].set_xlim(1, 60)
+    axes[1, 1].set_xlim(1, 60)
 
     plt.tight_layout(rect=[0, 0, 1, 0.96])
     plt.show()
