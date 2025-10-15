@@ -1,1 +1,3 @@
-Please refer to requirements.txt for additional packages. Use "pip install -r requirements.txt".
+< Instruction for installation >
+Please refer to requirements.txt for additional packages. 
+Use "pip install -r requirements.txt".
