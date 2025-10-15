@@ -41,9 +41,9 @@ tbl.scale(1.2, 1.3)
 # Add a title 
 plt.title("Draft Pick Summary (Selected Picks)", fontsize=14, pad=20, weight='bold')
 
-# Save the table as PNG 
+# Save the table
 out_path = os.path.join("analysis/results", "pick_summary_table.png")
 plt.savefig(out_path, bbox_inches='tight', dpi=300)
 plt.close(fig)
 
-print(f"✅ Table image saved to: {out_path}")
+print(f"Table image saved to: {out_path}")
