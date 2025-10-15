@@ -19,9 +19,8 @@ year_col = "Year"
 pick_col = "Pk"
 ws_col = "Advanced_WS"
 
-# 4. Clean data
+# 4. Remove missing values
 df_clean = df[[year_col, pick_col, ws_col]].dropna()
-df_clean = df_clean[df_clean[ws_col] != 0]
 
 # 5. Define target years
 target_years = [1986, 1996]

@@ -4,25 +4,25 @@ OLS Regression Results for Selected Years
 Year: 1986
                             OLS Regression Results                            
 ==============================================================================
-Dep. Variable:            Advanced_WS   R-squared:                       0.035
-Model:                            OLS   Adj. R-squared:                  0.012
-Method:                 Least Squares   F-statistic:                     1.539
-Date:                Wed, 15 Oct 2025   Prob (F-statistic):              0.221
-Time:                        17:07:06   Log-Likelihood:                -209.54
-No. Observations:                  45   AIC:                             423.1
-Df Residuals:                      43   BIC:                             426.7
+Dep. Variable:            Advanced_WS   R-squared:                       0.070
+Model:                            OLS   Adj. R-squared:                  0.054
+Method:                 Least Squares   F-statistic:                     4.392
+Date:                Wed, 15 Oct 2025   Prob (F-statistic):             0.0405
+Time:                        18:00:53   Log-Likelihood:                -274.41
+No. Observations:                  60   AIC:                             552.8
+Df Residuals:                      58   BIC:                             557.0
 Df Model:                           1                                         
 Covariance Type:            nonrobust                                         
 ==============================================================================
                  coef    std err          t      P>|t|      [0.025      0.975]
 ------------------------------------------------------------------------------
-const         29.2442      7.303      4.004      0.000      14.516      43.973
-Pk            -0.2796      0.225     -1.241      0.221      -0.734       0.175
+const         27.5389      6.234      4.418      0.000      15.060      40.017
+Pk            -0.3725      0.178     -2.096      0.040      -0.728      -0.017
 ==============================================================================
-Omnibus:                       23.777   Durbin-Watson:                   2.096
-Prob(Omnibus):                  0.000   Jarque-Bera (JB):               35.986
-Skew:                           1.686   Prob(JB):                     1.53e-08
-Kurtosis:                       5.797   Cond. No.                         61.0
+Omnibus:                       39.311   Durbin-Watson:                   2.105
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):               99.256
+Skew:                           2.064   Prob(JB):                     2.80e-22
+Kurtosis:                       7.760   Cond. No.                         71.1
 ==============================================================================
 
 Notes:
@@ -32,25 +32,25 @@ Notes:
 Year: 1996
                             OLS Regression Results                            
 ==============================================================================
-Dep. Variable:            Advanced_WS   R-squared:                       0.329
-Model:                            OLS   Adj. R-squared:                  0.313
-Method:                 Least Squares   F-statistic:                     21.04
-Date:                Wed, 15 Oct 2025   Prob (F-statistic):           3.87e-05
-Time:                        17:07:06   Log-Likelihood:                -223.06
-No. Observations:                  45   AIC:                             450.1
-Df Residuals:                      43   BIC:                             453.7
+Dep. Variable:            Advanced_WS   R-squared:                       0.383
+Model:                            OLS   Adj. R-squared:                  0.372
+Method:                 Least Squares   F-statistic:                     34.77
+Date:                Wed, 15 Oct 2025   Prob (F-statistic):           2.24e-07
+Time:                        18:00:54   Log-Likelihood:                -281.35
+No. Observations:                  58   AIC:                             566.7
+Df Residuals:                      56   BIC:                             570.8
 Df Model:                           1                                         
 Covariance Type:            nonrobust                                         
 ==============================================================================
                  coef    std err          t      P>|t|      [0.025      0.975]
 ------------------------------------------------------------------------------
-const         69.8917      9.686      7.216      0.000      50.359      89.425
-Pk            -1.4666      0.320     -4.587      0.000      -2.111      -0.822
+const         68.1989      8.376      8.143      0.000      51.420      84.977
+Pk            -1.4560      0.247     -5.896      0.000      -1.951      -0.961
 ==============================================================================
-Omnibus:                       18.254   Durbin-Watson:                   1.807
-Prob(Omnibus):                  0.000   Jarque-Bera (JB):               24.306
-Skew:                           1.331   Prob(JB):                     5.27e-06
-Kurtosis:                       5.423   Cond. No.                         56.0
+Omnibus:                       28.355   Durbin-Watson:                   1.741
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):               57.073
+Skew:                           1.549   Prob(JB):                     4.04e-13
+Kurtosis:                       6.744   Cond. No.                         68.8
 ==============================================================================
 
 Notes:
