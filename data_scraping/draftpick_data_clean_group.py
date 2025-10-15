@@ -52,6 +52,11 @@ def clean_nba_draft_data(input_path, output_path):
     df = df[df['Pk'] <= 60].copy()                       
     print(f"Remaining rows after filtering top 60 picks: {len(df)}")
     
+    # Group players (6 groups)
+    bins = [0, 10, 20, 30, 40, 50, float('inf')]  # 0~10, 11~20, ... , 51~
+    labels = [1, 2, 3, 4, 5, 6]
+    df['Group'] = pd.cut(df['Pk'], bins=bins, labels=labels, right=True)
+
     # 5. Save the cleaned DataFrame to a new CSV file.
     df.to_csv(output_path, index=False, encoding='utf-8-sig')
     print(f"\nSuccessfully cleaned the data and saved it to '{output_path}'.")
@@ -62,7 +67,7 @@ def clean_nba_draft_data(input_path, output_path):
 if __name__ == '__main__':
     # Define the input file (from the scraper) and the output file (for the cleaned data)
     raw_data_path = os.path.join("../artifacts", "nba_draft_1980_2010.csv")
-    cleaned_data_path = os.path.join("../artifacts", "nba_draft_1980_2010_cleaned.csv")
-
+    cleaned_data_path = os.path.join("../artifacts", "nba_draft_1980_2010_cleaned_grouped.csv")
+    
     # Run the cleaning process
     clean_nba_draft_data(raw_data_path, cleaned_data_path)
