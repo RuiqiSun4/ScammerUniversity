@@ -1,0 +1,23 @@
+import os 
+import pandas as pd 
+import matplotlib.pyplot as plt 
+import numpy as np
+
+data = os.path.join("artifacts", "nba_draft_1980_2010_cleaned.csv")
+df = pd.read_csv(data)
+
+pick = "Pk"
+vorp = "Advanced_VORP"
+
+x = df[pick]
+y = df[vorp]
+
+plt.figure()
+plt.scatter(x, y)
+plt.title("Draft Position vs VORP")
+plt.xlabel("Draft Position")
+plt.ylabel("VORP")
+plt.grid(True)
+plt.tight_layout()
+plt.show()
+
