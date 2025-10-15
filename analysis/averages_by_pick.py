@@ -6,8 +6,10 @@ cleaned_path = os.path.join("artifacts", "nba_draft_1980_2010_cleaned.csv")
 df = pd.read_csv(cleaned_path)
 
 
-# Compute average total points and points per game for each group
+# Compute averages, drop irrelevant columns, and round to 2 decimal places.
 group_avg_all = df.groupby('Pk').mean(numeric_only=True).reset_index()
+group_avg_all = group_avg_all.drop(columns=['Round', 'Round.1', 'Year'], errors='ignore')
+group_avg_all = group_avg_all.round(2)
 
 # Print a preview
 print("Average of all numeric columns by overall pick:")
