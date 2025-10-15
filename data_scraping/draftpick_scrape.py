@@ -2,6 +2,7 @@ import requests
 import pandas as pd
 import time
 from io import StringIO
+import os
 
 def scrape_draft_year(year):
     """
@@ -70,7 +71,8 @@ def main():
     # Concatenate all the yearly DataFrames into a single one.
     if all_drafts:
         final_df = pd.concat(all_drafts, ignore_index=True)
-        output_path = "nba_draft_1980_2010.csv"
+        os.makedirs("artifacts", exist_ok=True)
+        output_path = os.path.join("artifacts", "nba_draft_1980_2010.csv")
         final_df.to_csv(output_path, index=False, encoding='utf-8-sig')
         
         print(f"\nAll data has been scraped successfully! Saved to '{output_path}'.")
