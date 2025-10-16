@@ -11,7 +11,6 @@ Since only the top 60 draft picks per year are considered meaningful, our analys
 
 ### Extension of Data
 
-
 ### Glossary
 The key metrics used to evaluate draft efficiency are as follows:  
 
@@ -52,6 +51,8 @@ You can get these results (`analysis/results/ws_pick_corr_trend.png`, `ws_pick_c
 Your code will be executed in a Python environment contatining the Standard Library and the packages specified in `requirements.txt`. Install them with `pip install -r requirements.txt`.
 
 ### Scrape code
-Running the scrape code(`data_scraping/draftpick_scrape.py`) will take about 35 minutes. We have already uploaded the original data(`artifacts/nba_draft_1980_2010.csv`) to Github.  
-After scraping, we cleaned the data (`data_scraping/draft_data_clean.py`) and grouped the data by draft rank(`data_scraping/draft_data_clean_group.py`).
+Running the scrape code(`data_scraping/draftpick_scrape.py`) will take about 35 minutes. We have already uploaded the original data(`artifacts/nba_draft_1980_2010.csv`) to the repo.
+After scraping, we cleaned the data through `data_scraping/draft_data_clean.py`, which gave 'artifacts/nba_draft_1980_2010_cleaned.csv'.
+
+and grouped the data by draft rank(`data_scraping/draft_data_clean_group.py`).
 
