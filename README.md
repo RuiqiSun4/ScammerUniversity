@@ -30,10 +30,23 @@ For detailed explanations of the key terms used to assess draft efficiency, plea
 ### Win shares and draft rank
 If you make a scatter plot between win shares and draft ranks from 1980 to 2010 (number of observations: 1,802), there is a clear negative correlation (-0.4796). The results indicate that players selected at higher draft ranks (lower numerical values) tend to accumulate more career wins, suggesting a meaningful correlation between draft order and performance.
   
-![](analysis/results/ws_pick.png)
+![](analysis/results/ws_pick.png) 
   
-You can get this result (`analysis/results/ws_pick.png`, `analysis/results/ws_pick.txt`) by rerunning (`analysis/ws_pick.py`).
+You can get these results (`analysis/results/ws_pick.png`, `analysis/results/ws_pick.txt`) by rerunning (`analysis/ws_pick.py`).
 
+The negative correlation between draft rank and win share has fluctuated consistently from 1980 to 2010. While the year-by-year correlation graph does not reveal any notable long-term trends, this may suggest that the draft market has operated efficiently over time.  
+
+![](analysis/results/ws_pick_corr_trend.png) 
+
+The strongest negative correlation was observed in 1996, with a correlation coefficient of -0.619 and p-value of 0.000. This indicates that players with higher draft rankings (i.e., lower pick numbers) contributed significantly to team wins that year, and the result is statistically significant.
+
+![](analysis/results/ws_pick_1996_with_stats.png)
+
+In contrast, the weakest negative correlation occured in 1986, with a coefficient of -0.265 and p-value of 0.040. This suggests a weaker relationship between draft rank and win share in that year, and depending on the significant level, the result may not be statistically significant.
+
+![](analysis/results/ws_pick_1986_with_stats.png)
+
+You can get these results (`analysis/results/ws_pick_corr_trend.png`, `ws_pick_corr_by_year.csv`, `ws_pick_regression_1986_1996.txt`, `ws_pick_1996_with_stats.png`, `ws_pick_1986_with_stats.png`) by rerunning (`analysis/ws_pick_yearly.py`).
 
 ### (Please add other topics)
 
