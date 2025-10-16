@@ -6,8 +6,9 @@ from scipy.stats import pearsonr
 import statsmodels.api as sm
 
 # 1. Folder setup
-input_path = os.path.join("artifacts", "nba_draft_1980_2010_cleaned.csv")
-output_dir = "analysis"
+base_dir = os.path.dirname(os.path.abspath(__file__))
+input_path = os.path.join(base_dir, "..", "artifacts", "nba_draft_1980_2010_cleaned.csv")
+output_dir = os.path.join(base_dir, "results")
 os.makedirs(output_dir, exist_ok=True)
 
 # 2. Load data
@@ -18,9 +19,8 @@ year_col = "Year"
 pick_col = "Pk"
 ws_col = "Advanced_WS"
 
-# 4. Clean data
+# 4. Remove missing values
 df_clean = df[[year_col, pick_col, ws_col]].dropna()
-df_clean = df_clean[df_clean[ws_col] != 0]
 
 # 5. Define target years
 target_years = [1986, 1996]

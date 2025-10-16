@@ -1,0 +1,25 @@
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:            Advanced_WS   R-squared:                       0.230
+Model:                            OLS   Adj. R-squared:                  0.229
+Method:                 Least Squares   F-statistic:                     536.5
+Date:                Wed, 15 Oct 2025   Prob (F-statistic):          4.22e-104
+Time:                        17:57:58   Log-Likelihood:                -8576.3
+No. Observations:                1802   AIC:                         1.716e+04
+Df Residuals:                    1800   BIC:                         1.717e+04
+Df Model:                           1                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+const         46.2947      1.344     34.435      0.000      43.658      48.932
+Pk            -0.9124      0.039    -23.163      0.000      -0.990      -0.835
+==============================================================================
+Omnibus:                     1001.957   Durbin-Watson:                   1.796
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):             9411.037
+Skew:                           2.464   Prob(JB):                         0.00
+Kurtosis:                      13.053   Cond. No.                         69.0
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.

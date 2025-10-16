@@ -6,8 +6,9 @@ import matplotlib.pyplot as plt
 import statsmodels.api as sm
 
 # 1. Folder setup 
-input_path = os.path.join("artifacts", "nba_draft_1980_2010_cleaned.csv")
-output_dir = "analysis"
+base_dir = os.path.dirname(os.path.abspath(__file__))
+input_path = os.path.join(base_dir, "..", "artifacts", "nba_draft_1980_2010_cleaned.csv")
+output_dir = os.path.join(base_dir, "results")
 os.makedirs(output_dir, exist_ok=True)
 
 # 2. load data
@@ -17,10 +18,9 @@ df = pd.read_csv(input_path)
 pick_col = "Pk"
 ws_col = "Advanced_WS"
 
-# 4. Remove missing or zero values
-# Remove rows where either column is NaN or where Advanced_WS == 0
+# 4. Remove missing values
+# Remove rows where either the pick_col or ws_col column contains a missing value (NaN).
 df_clean = df[[pick_col, ws_col]].dropna()
-df_clean = df_clean[df_clean[ws_col] != 0]
 
 # 5. OLS regression
 X = sm.add_constant(df_clean[pick_col])
