@@ -40,13 +40,9 @@ The negative correlation between draft rank and win share has fluctuated consist
 
 The strongest negative correlation was observed in 1996, with a correlation coefficient of -0.619 and p-value of 0.000. This indicates that players with higher draft rankings (i.e., lower pick numbers) contributed significantly to team wins that year, and the result is statistically significant.
 
-![](analysis/results/ws_pick_1996_with_stats.png)
-
 In contrast, the weakest negative correlation occured in 1986, with a coefficient of -0.265 and p-value of 0.040. This suggests a weaker relationship between draft rank and win share in that year, and depending on the significant level, the result may not be statistically significant.
 
-![](analysis/results/ws_pick_1986_with_stats.png)
-
-You can get these results (`analysis/results/ws_pick_corr_trend.png`, `ws_pick_corr_by_year.csv`, `ws_pick_regression_1986_1996.txt`, `ws_pick_1996_with_stats.png`, `ws_pick_1986_with_stats.png`) by rerunning (`analysis/ws_pick_yearly.py`).
+You can get these results (`analysis/results/ws_pick_corr_trend.png`, `ws_pick_corr_by_year.csv`, `ws_pick_regression_1986_1996.txt`, `ws_pick_1996_with_stats.png`, `ws_pick_1986_with_stats.png`) by rerunning (`analysis/ws_pick_yearly.py`, `anlysis/ws_pick_plot_1986_1996.py`).
 
 ### (Please add other topics)
 
