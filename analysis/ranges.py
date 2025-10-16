@@ -23,11 +23,37 @@ tbl = (
     .groupby("group5", observed=True)
     .agg(
         Player = ("pick_num", "count"),
-        Avg_Win_Shares = (win_shares, "mean"),
-        Median_Win_Shares = (win_shares, "median"),
-        std_Win_Shares = (win_shares, "std"),    
+        Avg = (win_shares, "mean"),
+        Median = (win_shares, "median"),
+        std = (win_shares, "std"),    
     )
         .reset_index()
         )
+
+round_cols = ["Avg", "Median", "std"]
+for c in round_cols:
+    if c in tbl.columns:
+        tbl[c] = tbl[c].round(4)
+
+
+rows, cols = tbl.shape
+fig_height = max(3, 0.5 * (rows + 1))
+fig_width = max(6, 1 * cols)
+
+fig, ax = plt.subplots(figsize=(fig_width, fig_height))
+ax.axis("off")
+ax.axis("tight")
+
+table = ax.table(cellText=tbl.values,
+                 colLabels=tbl.columns.tolist(),
+                 loc="center")
+
+table.auto_set_font_size(False)
+table.set_fontsize(10)
+table.scale(1, 1.2)
+
+fig.tight_layout()
+fig.savefig(save_path, dpi = 400, bbox_inches="tight" )
+plt.close(fig)
 
 print(tbl.to_string(index=False))
