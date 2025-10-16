@@ -17,7 +17,7 @@ The key metrics used to evaluate draft efficiency are as follows:
 Pk: Draft rank    
 WS: Win Shares (An estimate of the number of wins contributed by a player)  
 PTS: Points per game  
-Years: Seasons the player has appeared in the NBA
+Years: Seasons the player has appeared in the NBA  
 MP: Minutes played per game
 
 For detailed explanations of the key terms used to assess draft efficiency, please refer to `reference/nba_stat_glossary.csv`.
