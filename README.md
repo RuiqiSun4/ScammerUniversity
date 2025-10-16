@@ -8,9 +8,20 @@ Since only the top 60 draft picks per year are considered meaningful, our analys
  This dataset was compiled by scraping NBA draft records from 1980 to 2010, with each year's data extracted from a dedicated webpage. 
 
 ### Limitation of Data
+The data compiled suffered from some notable limitations.
+  Firstly, the size of the draft picks varied year by year. In 1980, for example, the draft pick contained 214 selections and 10 rounds, while 1988 included only 75 selections and 3 rounds. By 1989, the number of selections and rounds standardized at 54 selections and 2 rounds, however the number of selections changed every few years. By 2010, 60 selections were made with only 2 rounds. This meant that the sample size was not standard throughout our timeframe, and meant that without editing, our data could suffer from homoskedastic errors. To correct this, we limited our data collection to the top 60 selections per year, however that meant that any analysis on players ranked below 60 could not be performed. 
+    Of note, some limitations regarding this were self enforced, as we chose to cover a select range of years rather than the entirety of the available data. Thus, years before 1980 and after 2010 were not covered in our analysis.
+  Secondly, the quality of the data also varied heavily depending on the year. Player data below the top 20 ranked players was inconsistent, with missing values becoming more frequent the lower the rank was. While NA values were thoroughly removed from our data, this meant that analysis on players with missing data values could not be performed. 
+  Thirdly, the data did not cover important team metrics that can have significant effects on performance. Metrics such as team philosophies, individual player injuries, era differences, or the changing of a player's role on the team were not included, all of which can easily be determining factors into whether a player is ranked highly. 
+  Finally, because the data used already consisted of calculations such as total points, shooting success chances, VORP, etc., it is entirely possible that additional features regarding player performance may have been lost, simply due to how the raw data was collected. While statistics such as VORP, BPM, and WS may help with insight onto a player's performance, the reliance on averages and calculations done on individual games without being able to access said individual game statistics means that some insight is lost, especially in regards to whether individual games had a significant effect on the draft rank of a player. In theory, access to these individual statistics could remedy this issue, however the compilation of such statistics would likely be difficult in practice. 
 
 ### Extension of Data
-
+Further research could be done regarding (but not limited to) the following areas:
+    News coverage: Whether the news coverage around a player had a greater effect on ranking compared to their actual overall performance/win contribution.
+    Player roles: Whether certain roles a player could take on the team were more desirable depending on the year.
+    NBA Eras: Whether the prioritized skills of a player varied heavily depending on the era the NBA was in. 
+    Steroid usage: Whether players that were caught using performance enhancing substances such as steroids more likely to achieve a higher ranking.
+Furthermore, increasing the size of the player pool could be beneficial for continued research on this topic. 
 
 ### Glossary
 The key metrics used to evaluate draft efficiency are as follows:  
