@@ -1,5 +1,5 @@
 # Statistical Insights into Draft Efficiency in the NBA
-### "Are top-paid NBA rookies performing well?"
+### "Do Top Draft Picks in NBA actually perform well?"
 
 ## Data  
 In this project, we used a basketball reference website(`https://www.basketball-reference.com/draft/`). The NBA draft records spans from 1980 to 2010 and serves as the foundation for evaluating draft efficiency and player performance.   
