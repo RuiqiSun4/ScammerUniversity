@@ -6,6 +6,9 @@ import numpy as np
 data = os.path.join("artifacts", "nba_draft_1980_2010_cleaned.csv")
 df = pd.read_csv(data)
 
+os.makedirs("analysis/results", exist_ok = True)
+save_path = os.path.join("analysis/results", "Draft_Pick_vs_Rebs.png")
+
 pick = "Pk"
 rebs = "Per Game_TRB"
 x = pd.to_numeric(df[pick], errors = "coerce")
@@ -27,4 +30,7 @@ plt.xlabel("Draft Position")
 plt.ylabel("Rebounds per Game")
 plt.grid(True)
 plt.tight_layout()
+plt.savefig(save_path)
 plt.show()
+plt.close()
+
