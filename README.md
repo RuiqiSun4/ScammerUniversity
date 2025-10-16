@@ -54,5 +54,7 @@ Your code will be executed in a Python environment contatining the Standard Libr
 Running the scrape code(`data_scraping/draftpick_scrape.py`) will take about 35 minutes. We have already uploaded the original data(`artifacts/nba_draft_1980_2010.csv`) to the repo.
 After scraping, we cleaned the data through `data_scraping/draft_data_clean.py`, which gave 'artifacts/nba_draft_1980_2010_cleaned.csv'.
 
+
+
 and grouped the data by draft rank(`data_scraping/draft_data_clean_group.py`).
 
