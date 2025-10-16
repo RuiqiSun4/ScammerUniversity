@@ -28,7 +28,7 @@ y = df_clean[ws_col]
 model = sm.OLS(y, X).fit()
 
 # 6. Save regression summary
-with open(os.path.join(output_dir, "regression_summary.txt"), "w", encoding="utf-8") as f:
+with open(os.path.join(output_dir, "ws_pick.txt"), "w", encoding="utf-8") as f:
     f.write(model.summary().as_text())
 
 # 7. Scatter plot + regression line
