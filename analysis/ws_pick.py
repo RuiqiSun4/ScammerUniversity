@@ -12,7 +12,7 @@ input_path = os.path.join(base_dir, "..", "artifacts", "nba_draft_1980_2010_clea
 output_dir = os.path.join(base_dir, "results")
 os.makedirs(output_dir, exist_ok=True)
 
-# 2. load cleaned draft data
+# 2. load cleaned NBA draft data
 df = pd.read_csv(input_path)
 
 # 3. Specify column names
@@ -56,7 +56,7 @@ plt.ylabel("Win Shares")
 plt.legend()
 plt.tight_layout()
 
-# 11. Save plot
+# 11. Save plot in output directory
 plt.savefig(os.path.join(output_dir, "ws_pick.png"), dpi=300)
 plt.close()
 
