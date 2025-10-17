@@ -34,11 +34,12 @@ with open(os.path.join(output_dir, "ws_pick.txt"), "w", encoding="utf-8") as f:
 
 # 7. Calculate Pearson correlation coefficient and p-value
 r, pval = pearsonr(df_clean["Pk"], df_clean["Advanced_WS"])
-n = len(df_clean)  # Number of observations
+n = len(df_clean)   # Number of observations
 
 # 8. Set plot style and create scatterplot with regression line
 sns.set(style="whitegrid")
 plt.figure(figsize=(10, 6))
+
 sns.scatterplot(x="Pk", y="Advanced_WS", data=df, alpha=0.6, label="Players")
 sns.regplot(x="Pk", y="Advanced_WS", data=df, scatter=False, color="red", line_kws={"label": "Linear Fit"})
 
@@ -55,7 +56,7 @@ plt.ylabel("Win Shares")
 plt.legend()
 plt.tight_layout()
 
-# 11. Save plot
+# 11. Save plot in output directory
 plt.savefig(os.path.join(output_dir, "ws_pick.png"), dpi=300)
 plt.close()
 
