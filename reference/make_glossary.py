@@ -1,4 +1,5 @@
 import pandas as pd
+import os
 
 # Create NBA stat abbreviation glossary table
 data = [
@@ -13,14 +14,19 @@ data = [
     {"Abbreviation": "WS", "Full Name": "Win Shares", "Description": "Estimated contribution to team wins"},
     {"Abbreviation": "WS/48", "Full Name": "Win Shares per 48 Minutes", "Description": "Win contribution per 48 minutes"},
     {"Abbreviation": "BPM", "Full Name": "Box Plus/Minus", "Description": "Impact compared to an average player (± scale)"},
-    {"Abbreviation": "VORP", "Full Name": "Value Over Replacement Player", "Description": "Value compared to a replacement-level player (higher is better)"}
+    {"Abbreviation": "VORP", "Full Name": "Value Over Replacement Player", "Description": "Value compared to a replacement-level player (higher is better)"},
+    {"Abbreviation": "", "Full Name": "Reference", "Description": "https://www.basketball-reference.com/draft/"}
 ]
 
 # Create DataFrame
 df = pd.DataFrame(data)
 
-# Save as CSV
-df.to_csv("nba_stat_glossary.csv", index=False)
+# Get current script directory
+script_dir = os.path.dirname(__file__)
+output_path = os.path.join(script_dir, "nba_stat_glossary.csv")
 
-# Added comment for clarity.
-# This script generates a glossary for NBA stat abbreviations.
+# Save as CSV in the same folder
+df.to_csv(output_path, index=False)
+
+# This script generates a glossary for NBA stat abbreviations,
+# and saves it in the reference/ folder with a reference link.
