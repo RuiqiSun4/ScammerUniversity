@@ -51,8 +51,8 @@ plt.text(0.95, 0.95, stats_text, transform=plt.gca().transAxes,
 
 # 10. Add title, axis labels, and legend
 plt.title("Win Shares by Draft Pick (1980–2010)", fontsize=16)
-plt.xlabel("NBA Draft Pick Ranks")
-plt.ylabel("Win Shares")
+plt.xlabel("NBA Draft Pick Ranks", fontsize=14)
+plt.ylabel("Win Shares", fontsize=14)
 plt.legend()
 plt.tight_layout()
 
