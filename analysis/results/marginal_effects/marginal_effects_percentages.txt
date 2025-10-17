@@ -1,0 +1,31 @@
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                     Pk   R-squared:                       0.440
+Model:                            OLS   Adj. R-squared:                  0.438
+Method:                 Least Squares   F-statistic:                     201.7
+Date:                Thu, 16 Oct 2025   Prob (F-statistic):          6.06e-221
+Time:                        13:10:08   Log-Likelihood:                -7127.8
+No. Observations:                1802   AIC:                         1.427e+04
+Df Residuals:                    1794   BIC:                         1.432e+04
+Df Model:                           7                                         
+Covariance Type:            nonrobust                                         
+================================================================================
+                   coef    std err          t      P>|t|      [0.025      0.975]
+--------------------------------------------------------------------------------
+const           46.4699      0.692     67.173      0.000      45.113      47.827
+Shooting_FG%    -0.5435      3.182     -0.171      0.864      -6.784       5.697
+Shooting_3P%     1.3611      2.761      0.493      0.622      -4.055       6.777
+Shooting_FT%    -6.9295      2.091     -3.313      0.001     -11.031      -2.827
+Per Game_MP     -0.2970      0.127     -2.332      0.020      -0.547      -0.047
+Per Game_PTS    -0.8241      0.169     -4.870      0.000      -1.156      -0.492
+Per Game_TRB    -1.2539      0.299     -4.200      0.000      -1.840      -0.668
+Per Game_AST    -0.0328      0.350     -0.094      0.925      -0.720       0.654
+==============================================================================
+Omnibus:                       35.547   Durbin-Watson:                   0.924
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):               37.319
+Skew:                           0.349   Prob(JB):                     7.88e-09
+Kurtosis:                       2.896   Cond. No.                         243.
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
