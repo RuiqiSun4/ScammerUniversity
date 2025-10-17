@@ -61,6 +61,8 @@ If you make a scatter plot between win shares and draft ranks from 1980 to 2010 
   
 The negative correlation between draft rank and win share has fluctuated consistently from 1980 to 2010. While the year-by-year correlation graph does not reveal any notable long-term trends, this may suggest that the draft market has operated efficiently over time.  
 
+Next, we examine the year-by-year relationship between draft rank and win shares using a time-series analysis. While the negative correlation between draft rank and win shares has fluctuated consistently from 1980 to 2010, the yearly correlation graph does not reveal any significant long-term trends (trendline slope: 0.001, p-value: 0.549). Ths may suggest that the draft market has operated relatively efficient over time. For further details, you can refer to the yearly correlation data in `analysis/results/ws_pick_corr_by_year.csv`.
+
 ![](analysis/results/ws_pick_corr_trend.png) 
 
 The strongest negative correlation was observed in 1996, with a correlation coefficient of -0.619 and p-value of 0.000. This indicates that players with higher draft rankings (i.e., lower pick numbers) contributed significantly to team wins that year, and the result is statistically significant. The 1st pick in 1996 was Allen Iverson, followed by Kobe Bryant in 13th pick. Historically, the 1996 draft is considered as one of the successful drafts full of talents in NBA history. 
