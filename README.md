@@ -26,12 +26,13 @@ The data compiled suffered from some notable limitations:
 ### Glossary
 The key metrics used to evaluate draft efficiency are as follows:  
 - Pk: Draft rank  
-- WS: Win Shares (An estimate of the number of wins contributed by a player)  
+- WS: Win Shares 
 - PTS: Points per game  
 - Years: Seasons the player has appeared in the NBA  
-- MP: Minutes played per game  
+- MP: Minutes played per game 
+- VORP: Value Over Replacement Player   
 
-For detailed explanations of the key terms used to assess draft efficiency, please refer to `reference/nba_stat_glossary.csv`.
+For other key metrics, please refer to `reference/nba_stat_glossary.csv`.
 
 ## Methodology for Analysis
 1. Data Cleaning: All 30 years of NBA Draft data (1980–2010) were merged into a single unified DataFrame. To ensure consistency, we limited the dataset to the first 60 picks from each draft year—representing two standard rounds. The cleaning process included removing duplicate or corrupted rows, fixing header inconsistencies, and standardizing column names. An additional variable, year, was added to distinguish picks across different years and all numeric fields were verified for validity.  
@@ -55,6 +56,9 @@ The table shows a strong decline in career outcomes as draft position increases.
 
 
 ### Part 2: Win shares and draft rank
+
+Win Shares (WS) measures how much a player contributed to his team’s total wins. It divides a team’s total victories among its players based on their performance. So, if a player has 10 WS, it means he was responsible for about 10 of his team’s wins.  
+  
 If you make a scatter plot between win shares and draft ranks from 1980 to 2010 (number of observations: 1,802), there is a clear negative correlation (-0.4796). The results indicate that players selected at higher draft ranks (lower numerical values) tend to accumulate more career wins, suggesting a meaningful correlation between draft order and performance.
   
 ![](analysis/results/ws_pick.png) 
@@ -71,7 +75,12 @@ In contrast, the weakest negative correlation occured in 1986, with a coefficien
 
 If you are interested in exploring further, feel free to check out the scatter plots and regression results for the years 1996 and 1986. You can refer to the "Instruction to rerun" at the bottom or the results files in the "analysis/results" folder. (e.g. `analysis/results/ws_pick_1996_with_stats.png`)
 
-### (Please add other topics)
+### Part 3: VORP and draft rank
+
+VORP (Value Over Replacement Player) shows how much better a player is compared to an average “replacement-level” player. In other words, it measures how much value a player adds to his team beyond what a typical backup or bench player would contribute. A higher VORP means the player is more valuable and harder to replace. 
+
+![](analysis/results/Draft_Pick_vs_VORP.png)
+
 
 
 ## Summary and Conclusion  
