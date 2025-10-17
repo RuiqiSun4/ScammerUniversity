@@ -1,7 +1,13 @@
 import pandas as pd
 import os
 
-# Create NBA stat abbreviation glossary table
+# Get the directory where this script is located
+current_dir = os.path.dirname(__file__)
+
+# Define the output path for the CSV file
+output_path = os.path.join(current_dir, "nba_stat_glossary.csv")
+
+# Define NBA stat abbreviation glossary data
 data = [
     {"Abbreviation": "G", "Full Name": "Games Played", "Description": "Total number of games played by the player"},
     {"Abbreviation": "MP", "Full Name": "Minutes Played", "Description": "Total minutes played"},
@@ -15,18 +21,12 @@ data = [
     {"Abbreviation": "WS/48", "Full Name": "Win Shares per 48 Minutes", "Description": "Win contribution per 48 minutes"},
     {"Abbreviation": "BPM", "Full Name": "Box Plus/Minus", "Description": "Impact compared to an average player (± scale)"},
     {"Abbreviation": "VORP", "Full Name": "Value Over Replacement Player", "Description": "Value compared to a replacement-level player (higher is better)"},
-    {"Abbreviation": "", "Full Name": "Reference", "Description": "https://www.basketball-reference.com/draft/"}
+    {"Abbreviation": "Reference", "Full Name": "For more information", "Description": "https://www.basketball-reference.com/draft/"}
 ]
 
-# Create DataFrame
+# Create a DataFrame and save it as a CSV file
 df = pd.DataFrame(data)
-
-# Get current script directory
-script_dir = os.path.dirname(__file__)
-output_path = os.path.join(script_dir, "nba_stat_glossary.csv")
-
-# Save as CSV in the same folder
 df.to_csv(output_path, index=False)
 
-# This script generates a glossary for NBA stat abbreviations,
-# and saves it in the reference/ folder with a reference link.
+# This script generates a glossary of NBA stat abbreviations
+# and saves the output file in the same folder as the script (reference/).
