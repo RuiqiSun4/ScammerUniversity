@@ -4,6 +4,7 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 import statsmodels.api as sm
+from scipy.stats import pearsonr
 
 # 1. Folder setup 
 base_dir = os.path.dirname(os.path.abspath(__file__))
@@ -11,7 +12,7 @@ input_path = os.path.join(base_dir, "..", "artifacts", "nba_draft_1980_2010_clea
 output_dir = os.path.join(base_dir, "results")
 os.makedirs(output_dir, exist_ok=True)
 
-# 2. load data
+# 2. load cleaned NBA draft data
 df = pd.read_csv(input_path)
 
 # 3. Specify column names
@@ -31,17 +32,30 @@ model = sm.OLS(y, X).fit()
 with open(os.path.join(output_dir, "ws_pick.txt"), "w", encoding="utf-8") as f:
     f.write(model.summary().as_text())
 
-# 7. Scatter plot + regression line
-plt.figure(figsize=(8,6))
-sns.scatterplot(data=df_clean, x=pick_col, y=ws_col, alpha=0.6, edgecolor=None)
-sns.regplot(data=df_clean, x=pick_col, y=ws_col, scatter=False, color="red", line_kws={'linewidth': 2})
-plt.title("Win Shares vs Draft Pick (1980–2010)", fontsize=14)
-plt.xlabel("Draft Pick Number")
+# 7. Calculate Pearson correlation coefficient and p-value
+r, pval = pearsonr(df_clean["Pk"], df_clean["Advanced_WS"])
+n = len(df_clean)  # Number of observations
+
+# 8. Set plot style and create scatterplot with regression line
+sns.set(style="whitegrid")
+plt.figure(figsize=(10, 6))
+sns.scatterplot(x="Pk", y="Advanced_WS", data=df, alpha=0.6, label="Players")
+sns.regplot(x="Pk", y="Advanced_WS", data=df, scatter=False, color="red", line_kws={"label": "Linear Fit"})
+
+# 9. Annotate plot with correlation statistics
+stats_text = f"r = {r:.3f}, p = {pval:.3g}, n = {n}"
+plt.text(0.95, 0.95, stats_text, transform=plt.gca().transAxes,
+         fontsize=12, verticalalignment='top', horizontalalignment='right',
+         bbox=dict(boxstyle="round", facecolor="white", alpha=0.5))
+
+# 10. Add title, axis labels, and legend
+plt.title("Win Shares by Draft Pick (1980–2010)", fontsize=16)
+plt.xlabel("NBA Draft Pick Ranks")
 plt.ylabel("Win Shares")
-plt.grid(True, linestyle="--", alpha=0.5)
+plt.legend()
 plt.tight_layout()
 
-# 8. Save plot
+# 11. Save plot
 plt.savefig(os.path.join(output_dir, "ws_pick.png"), dpi=300)
 plt.close()
 
