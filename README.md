@@ -59,8 +59,6 @@ If you make a scatter plot between win shares and draft ranks from 1980 to 2010 
   
 ![](analysis/results/ws_pick.png) 
   
-You can get these results (`analysis/results/ws_pick.png`, `analysis/results/ws_pick.txt`) by rerunning (`analysis/ws_pick.py`).
-
 The negative correlation between draft rank and win share has fluctuated consistently from 1980 to 2010. While the year-by-year correlation graph does not reveal any notable long-term trends, this may suggest that the draft market has operated efficiently over time.  
 
 ![](analysis/results/ws_pick_corr_trend.png) 
@@ -69,7 +67,7 @@ The strongest negative correlation was observed in 1996, with a correlation coef
 
 In contrast, the weakest negative correlation occured in 1986, with a coefficient of -0.265 and p-value of 0.040. This suggests that in 1986, the players that teams invested heavily in failed to deliver strong performances, and at the 1% significance level, there was no statistically meaningful evidence that higher draft picks performed better.
 
-You can get these results (`analysis/results/ws_pick_corr_trend.png`, `ws_pick_corr_by_year.csv`, `ws_pick_regression_1986_1996.txt`, `ws_pick_1996_with_stats.png`, `ws_pick_1986_with_stats.png`) by rerunning (`analysis/ws_pick_yearly.py`, `anlysis/ws_pick_plot_1986_1996.py`).
+If you are interested in exploring further, feel free to check out the scatter plots and regression results for the years 1996 and 1986. You can refer to the "Instruction to rerun" at the bottom or the results files in the "analysis/results" folder. (e.g. `analysis/results/ws_pick_1996_with_stats.png`)
 
 ### (Please add other topics)
 
@@ -104,7 +102,15 @@ Your code will be executed in a Python environment contatining the Standard Libr
 Running the scrape code(`data_scraping/draftpick_scrape.py`) will take about 35 minutes. We have already uploaded the original data(`artifacts/nba_draft_1980_2010.csv`) to the repo.
 After scraping, we cleaned the data through `data_scraping/draft_data_clean.py`, which gave 'artifacts/nba_draft_1980_2010_cleaned.csv'.
 
-### Analysis. 
-TThe following code file groups the data by draft rank(`data_scraping/draft_data_clean_group.py`).
+### Analysis 
+[Part 1: Draft Pick Summary]  
+
+The following code file groups the data by draft rank(`data_scraping/draft_data_clean_group.py`).
 
 Running (`analysis/averages_by_pick.py`) will generate an additional CSV file, (`artifacts/pick_group_averages.csv`), containing the average values of all key performance metrics for each draft pick. Following the creation of this auxilliary csv, one can then run (`analysis/pick_average_trends.py`) and (`analysis/comparison_for_representative_picks.py`) to generate the following analysis results:(`analysis/results/draft_pick_trends.png`), and (`analysis/comparison_for_representative_picks.py`).
+
+[Part 2: Win shares and draft rank]  
+
+To get a scatter plot and regression results (`analysis/results/ws_pick.png`, `analysis/results/ws_pick.txt`), rerun `analysis/ws_pick.py`.  
+To get a yearly correlation trend plot and regression results (`analysis/results/ws_pick_corr_trend.png`, `ws_pick_corr_by_year.csv`), rerun (`analysis/ws_pick_yearly.py`).  
+If you are intested in scatter plots and regression results in the extreme years in terms of correlation between Win shares and draft rank (`analysis/results/ws_pick_1996_with_stats.png`, `ws_pick_1986_with_stats.png`, `ws_pick_regression_1986_1996.txt`), rerun `anlysis/ws_pick_plot_1986_1996.py`.
