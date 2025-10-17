@@ -4,7 +4,7 @@ Dep. Variable:            Advanced_WS   R-squared:                       0.230
 Model:                            OLS   Adj. R-squared:                  0.229
 Method:                 Least Squares   F-statistic:                     536.5
 Date:                Fri, 17 Oct 2025   Prob (F-statistic):          4.22e-104
-Time:                        13:45:48   Log-Likelihood:                -8576.3
+Time:                        13:53:10   Log-Likelihood:                -8576.3
 No. Observations:                1802   AIC:                         1.716e+04
 Df Residuals:                    1800   BIC:                         1.717e+04
 Df Model:                           1                                         

@@ -40,7 +40,7 @@ n = len(df_clean)   # Number of observations
 sns.set(style="whitegrid")
 plt.figure(figsize=(10, 6))
 
-sns.scatterplot(x="Pk", y="Advanced_WS", data=df, alpha=0.6)
+sns.scatterplot(x="Pk", y="Advanced_WS", data=df, alpha=0.6, label="Players")
 sns.regplot(x="Pk", y="Advanced_WS", data=df, scatter=False, color="red", line_kws={"label": "Linear Fit"})
 
 # 9. Annotate plot with correlation statistics
