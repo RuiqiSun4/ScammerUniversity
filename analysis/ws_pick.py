@@ -9,7 +9,7 @@ from scipy.stats import pearsonr
 # 1. Folder setup 
 base_dir = os.path.dirname(os.path.abspath(__file__))
 input_path = os.path.join(base_dir, "..", "artifacts", "nba_draft_1980_2010_cleaned.csv")
-output_dir = os.path.join(base_dir, "results")
+output_dir = os.path.join(base_dir, "results", "ws_pick")
 os.makedirs(output_dir, exist_ok=True)
 
 # 2. load cleaned NBA draft data
