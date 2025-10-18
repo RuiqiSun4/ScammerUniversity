@@ -83,7 +83,7 @@ We examine the year-by-year relationship between draft rank and VORP using a tim
 
 ![](analysis/results/vorp_pick/vorp_pick_corr_trend.png)
 
-As a supplementary analysis, we examine the relationship between win shares and VORP. As expected, the two metrics exhibit a consistently strong positive correlation over the 31-year period, ranging from 0.85 to 0.95 annually, despite minor fluctuations. Given the stability of this high correlation, it is reasonable to consider win shares and VORP as reliable indicators of player performance. For further exploration, refer to the yearly correlation data in `analysis/results/ws_vorp/ws_vorp_corr_by_year.csv`.
+As a supplementary analysis, we examine the relationship between win shares and VORP. As expected, the two metrics exhibit a consistently strong positive correlation over the 31-year period, ranging from 0.867 to 0.969 annually, despite minor fluctuations. Given the stability of this high correlation, it is reasonable to consider win shares and VORP as reliable indicators of player performance. For further exploration, refer to the yearly correlation data in `analysis/results/ws_vorp/ws_vorp_corr_by_year.csv`.
 
 
 ![](analysis/results/ws_vorp/ws_vorp_corr_trend.png)
@@ -93,7 +93,7 @@ As a supplementary analysis, we examine the relationship between win shares and 
 Our analysis reveals a clear and consistent negative relationship between draft position and career performance. Players selected earlier in the draft tend to achieve higher totals in points, minutes, and career longevity, as well as stronger advanced metrics such as Win Shares (WS) and Value Over Replacement Player (VORP). The most significant drop in performance occurs within the first round, where production and longevity decline sharply from early-lottery to late-first-round picks.  
 Beyond the 30th pick, player outcomes continue to fall, though the differences between later selections become smaller. Overall, the results confirm that while early picks generally deliver higher value and longer careers, exceptional players can still emerge from any part of the draft, reflecting both the unpredictability and opportunity inherent in the selection process.
 
-In addition, year-by-year correlation trends between draft rank and both WS and VORP show no significant long-term directional shifts, suggesting that the draft market has remained relatively efficient over the past three decades. Furthermore, the strong and stable positive correlation between WS and VORP (r ≈ 0.85–0.95 annually) reinforces their reliability as complementary indicators of player value.
+In addition, year-by-year correlation trends between draft rank and both WS and VORP show no significant long-term directional shifts, suggesting that the draft market has remained relatively efficient over the past three decades. Furthermore, the strong and stable positive correlation between WS and VORP (r ≈ 0.87–0.97 annually) reinforces their reliability as complementary indicators of player value.
 
 Key takeaway: While higher draft selections offer greater average returns, identifying undervalued talent in later rounds remains a crucial edge for successful team building. At the same time, the consistency of market efficiency and metric alignment underscores the importance of robust scouting and contextual evaluation beyond raw draft position.
 
