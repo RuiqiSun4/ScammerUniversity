@@ -52,7 +52,7 @@ def clean_nba_draft_data(input_path, output_path):
     df = df[df['Pk'] <= 60].copy()                       
     print(f"Remaining rows after filtering top 60 picks: {len(df)}")
     
-    # Group players (6 groups)
+    # Group players (6 groups : 1~10(Group 1), 11~20(Group 2) ...)
     bins = [0, 10, 20, 30, 40, 50, float('inf')]  # 0~10, 11~20, ... , 51~
     labels = [1, 2, 3, 4, 5, 6]
     df['Group'] = pd.cut(df['Pk'], bins=bins, labels=labels, right=True)
