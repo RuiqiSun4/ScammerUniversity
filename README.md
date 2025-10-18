@@ -75,6 +75,10 @@ In contrast, the weakest negative correlation occured in 1986, with a coefficien
 
 If you are interested in exploring further, feel free to check out the scatter plots and regression results for the years 1996 and 1986. You can refer to the "Instruction to rerun" at the bottom or the results files in `analysis/results` folder. (e.g. `analysis/results/ws_pick/ws_pick_1996_with_stats.png`)
 
+![](analysis/results/draft_pick_ranges_vs_win_shares.png)
+
+NBA draft lottery positions are highly sought out and higher draft positions are perceived to be more valuable than lower positions. Although this makes logical sense, are there instances where lower pick ranges turn out to be more successful? To investigate this, we took draft selections and grouped them in increments of five (1-4, 5-9, 10-14, etc.) and analyized based on the players win shares. The results are as one may expect with the higher draft ranges exhibiting higher win shares that is until we get to the later draft positons. Interestingly we see that draft pick ranges 41-45 and 46-50 before have higher win shares than picks 36-40. We see a familiar phenomenon when we get to the last 10 selections where the last five picks (56-60) perform better than picks 51-55 on average. 
+
 ### <ins> _Part 3: VORP and draft rank_  </ins>
 
 VORP (Value Over Replacement Player) shows how much better a player is compared to an average “replacement-level” player. In other words, it measures how much value a player adds to his team beyond what a typical backup or bench player would contribute. 
