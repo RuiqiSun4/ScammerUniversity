@@ -93,6 +93,8 @@ As a supplementary analysis, we examine the relationship between win shares and 
 ![](analysis/results/ws_vorp/ws_vorp_corr_trend.png)
 
 
+In addition to the key analyses and visualizations discussed above, we conducted several supplementary visualizations and regression analyses. All results are available in the (`results/analysis`) directory, and the corresponding code used to generate them can also be found in the results directory. One can easily view them and regenerate the result as desired. For clarity and readability, these additional outputs are not included directly in the README.
+
 ## <ins> __Summary and Conclusion__  </ins>
 Our analysis reveals a clear and consistent negative relationship between draft position and career performance. Players selected earlier in the draft tend to achieve higher totals in points, minutes, and career longevity, as well as stronger advanced metrics such as Win Shares (WS) and Value Over Replacement Player (VORP). The most significant drop in performance occurs within the first round, where production and longevity decline sharply from early-lottery to late-first-round picks.  
 Beyond the 30th pick, player outcomes continue to fall, though the differences between later selections become smaller. Overall, the results confirm that while early picks generally deliver higher value and longer careers, exceptional players can still emerge from any part of the draft, reflecting both the unpredictability and opportunity inherent in the selection process.
