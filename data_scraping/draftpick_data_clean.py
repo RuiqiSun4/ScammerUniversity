@@ -52,7 +52,7 @@ def clean_nba_draft_data(input_path, output_path):
     df = df[df['Pk'] <= 60].copy()                       
     print(f"Remaining rows after filtering top 60 picks: {len(df)}")
     
-    # 5. Save the cleaned DataFrame to a new CSV file.
+    # 7. Save the cleaned DataFrame to a new CSV file.
     df.to_csv(output_path, index=False, encoding='utf-8-sig')
     print(f"\nSuccessfully cleaned the data and saved it to '{output_path}'.")
     print("Sample of the cleaned data:")
