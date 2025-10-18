@@ -7,8 +7,8 @@ Year: 1986
 Dep. Variable:            Advanced_WS   R-squared:                       0.070
 Model:                            OLS   Adj. R-squared:                  0.054
 Method:                 Least Squares   F-statistic:                     4.392
-Date:                Fri, 17 Oct 2025   Prob (F-statistic):             0.0405
-Time:                        18:56:44   Log-Likelihood:                -274.41
+Date:                Sat, 18 Oct 2025   Prob (F-statistic):             0.0405
+Time:                        16:15:32   Log-Likelihood:                -274.41
 No. Observations:                  60   AIC:                             552.8
 Df Residuals:                      58   BIC:                             557.0
 Df Model:                           1                                         
@@ -35,8 +35,8 @@ Year: 1996
 Dep. Variable:            Advanced_WS   R-squared:                       0.383
 Model:                            OLS   Adj. R-squared:                  0.372
 Method:                 Least Squares   F-statistic:                     34.77
-Date:                Fri, 17 Oct 2025   Prob (F-statistic):           2.24e-07
-Time:                        18:56:44   Log-Likelihood:                -281.35
+Date:                Sat, 18 Oct 2025   Prob (F-statistic):           2.24e-07
+Time:                        16:15:32   Log-Likelihood:                -281.35
 No. Observations:                  58   AIC:                             566.7
 Df Residuals:                      56   BIC:                             570.8
 Df Model:                           1                                         

@@ -3,8 +3,8 @@
 Dep. Variable:                     Pk   R-squared:                       0.359
 Model:                            OLS   Adj. R-squared:                  0.357
 Method:                 Least Squares   F-statistic:                     167.4
-Date:                Thu, 16 Oct 2025   Prob (F-statistic):          3.14e-169
-Time:                        13:10:08   Log-Likelihood:                -7250.5
+Date:                Sat, 18 Oct 2025   Prob (F-statistic):          3.14e-169
+Time:                        16:20:03   Log-Likelihood:                -7250.5
 No. Observations:                1802   AIC:                         1.452e+04
 Df Residuals:                    1795   BIC:                         1.455e+04
 Df Model:                           6                                         

@@ -66,5 +66,5 @@ def analyze_draft_groups(input_path):
 
 
 if __name__ == '__main__':
-    input_file_path = '../artifacts/nba_draft_1980_2010_cleaned_grouped.csv'
+    input_file_path = 'artifacts/nba_draft_1980_2010_cleaned_grouped.csv'
     analyze_draft_groups(input_file_path)

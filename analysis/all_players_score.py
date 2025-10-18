@@ -61,6 +61,6 @@ def analyze_every_player(input_path):
     plt.show()
 
 if __name__ == '__main__':
-    input_file_path = '../artifacts/nba_draft_1980_2010_cleaned_grouped.csv'
+    input_file_path = 'artifacts/nba_draft_1980_2010_cleaned_grouped.csv'
     analyze_every_player(input_file_path)
 
