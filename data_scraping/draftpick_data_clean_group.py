@@ -66,8 +66,8 @@ def clean_nba_draft_data(input_path, output_path):
 
 if __name__ == '__main__':
     # Define the input file (from the scraper) and the output file (for the cleaned data)
-    raw_data_path = os.path.join("../artifacts", "nba_draft_1980_2010.csv")
-    cleaned_data_path = os.path.join("../artifacts", "nba_draft_1980_2010_cleaned_grouped.csv")
+    raw_data_path = os.path.join("artifacts", "nba_draft_1980_2010.csv")
+    cleaned_data_path = os.path.join("artifacts", "nba_draft_1980_2010_cleaned_grouped.csv")
     
     # Run the cleaning process
     clean_nba_draft_data(raw_data_path, cleaned_data_path)
