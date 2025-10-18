@@ -27,10 +27,10 @@ The data compiled suffered from some notable limitations:
 The key metrics used to evaluate draft efficiency are as follows:  
 - Pk: Draft rank  
 - WS: Win Shares 
+- VORP: Value Over Replacement Player  
 - PTS: Points per game  
 - Years: Seasons the player has appeared in the NBA  
-- MP: Minutes played per game 
-- VORP: Value Over Replacement Player   
+- MP: Minutes played per game  
 
 For other key metrics, please refer to `reference/nba_stat_glossary.csv`.
 
@@ -57,13 +57,11 @@ The table shows a strong decline in career outcomes as draft position increases.
 
 Win Shares (WS) measures how much a player contributed to his team’s total wins. It divides a team’s total victories among its players based on their performance. So, if a player has 10 WS, it means he was responsible for about 10 of his team’s wins.  
   
-If you make a scatter plot between win shares and draft ranks from 1980 to 2010 (number of observations: 1,802), there is a clear negative correlation (-0.4796). The results indicate that players selected at higher draft ranks (lower numerical values) tend to accumulate more career wins, suggesting a meaningful correlation between draft order and performance.
+If you make a scatter plot between win shares and draft ranks from 1980 to 2010 (number of observations: 1,802), there is a clear negative correlation (-0.479). The results indicate that players selected at higher draft ranks (lower numerical values) tend to accumulate more career wins, suggesting a meaningful correlation between draft order and performance.
   
 ![](analysis/results/ws_pick/ws_pick.png) 
   
-The negative correlation between draft rank and win share has fluctuated consistently from 1980 to 2010. While the year-by-year correlation graph does not reveal any notable long-term trends, this may suggest that the draft market has operated efficiently over time.  
-
-Next, we examine the year-by-year relationship between draft rank and win shares using a time-series analysis. While the negative correlation between draft rank and win shares has fluctuated consistently from 1980 to 2010, the yearly correlation graph does not reveal any significant long-term trends (trendline slope: 0.001, p-value: 0.549). Ths may suggest that the draft market has operated relatively efficient over time. For further details, you can refer to the yearly correlation data in `analysis/results/ws_pick/ws_pick_corr_by_year.csv`.
+Next, we examine the year-by-year relationship between draft rank and win shares using a time-series analysis. While the negative correlation between draft rank and win shares has fluctuated consistently from 1980 to 2010, the yearly correlation graph does not reveal any significant long-term trends (trendline slope: 0.001, p-value: 0.549). This may suggest that the draft market has operated relatively efficient over time. You can refer to the yearly correlation data from `analysis/results/ws_pick/ws_pick_corr_by_year.csv`.
 
 ![](analysis/results/ws_pick/ws_pick_corr_trend.png) 
 
@@ -71,15 +69,22 @@ The strongest negative correlation was observed in 1996, with a correlation coef
 
 In contrast, the weakest negative correlation occured in 1986, with a coefficient of -0.265 and p-value of 0.040. This suggests that in 1986, the players that teams invested heavily in failed to deliver strong performances, and at the 1% significance level, there was no statistically meaningful evidence that higher draft picks performed better.
 
-If you are interested in exploring further, feel free to check out the scatter plots and regression results for the years 1996 and 1986. You can refer to the "Instruction to rerun" at the bottom or the results files in the "analysis/results" folder. (e.g. `analysis/results/ws_pick/ws_pick_1996_with_stats.png`)
+If you are interested in exploring further, feel free to check out the scatter plots and regression results for the years 1996 and 1986. You can refer to the "Instruction to rerun" at the bottom or the results files in `analysis/results` folder. (e.g. `analysis/results/ws_pick/ws_pick_1996_with_stats.png`)
 
 ### Part 3: VORP and draft rank
 
-VORP (Value Over Replacement Player) shows how much better a player is compared to an average “replacement-level” player. In other words, it measures how much value a player adds to his team beyond what a typical backup or bench player would contribute. A higher VORP means the player is more valuable and harder to replace. 
+VORP (Value Over Replacement Player) shows how much better a player is compared to an average “replacement-level” player. In other words, it measures how much value a player adds to his team beyond what a typical backup or bench player would contribute. 
 
-![](analysis/results/vorp_pick/vorp_pick.png)
+Similar to win shares analysis above, a scatter plot comparing VORP and draft rank from 1980 to 2010 reveals a clear negative correlation (r = –0.373, n = 1,802, p-value = 1.02e–60). This indicates that rookies selected at higher draft ranks (i.e., lower numerical values) tend to deliver greater value and are significantly harder to replace.
+
+![](analysis/results/vorp_pick/vorp_pick.png)  
+
+We examine the year-by-year relationship between draft rank and VORP using a time-series analysis. The negative correlation between draft rank and VORP has fluctuated consistently over time. The yearly correlation graph does not reveal any significant long-term trends (trendline slope: 0.001, p-value: 0.535), suggesting that the draft market has remained relatively efficient in the long run. For further details, refer to the yearly correlation data in `analysis/results/ws_pick/ws_pick_corr_by_year.csv`.
 
 ![](analysis/results/vorp_pick/vorp_pick_corr_trend.png)
+
+As a supplementary analysis, we examine the relationship between win shares and VORP. As expected, the two metrics exhibit a consistently strong positive correlation over the 31-year period, ranging from 0.85 to 0.95 annually, despite minor fluctuations. Given the stability of this high correlation, it is reasonable to consider win shares and VORP as reliable indicators of player performance. For further exploration, refer to the yearly correlation data in `analysis/results/ws_vorp/ws_vorp_corr_by_year.csv`.
+
 
 ![](analysis/results/ws_vorp/ws_vorp_corr_trend.png)
 
@@ -88,7 +93,10 @@ VORP (Value Over Replacement Player) shows how much better a player is compared 
 Our analysis reveals a clear and consistent negative relationship between draft position and career performance. Players selected earlier in the draft tend to achieve higher totals in points, minutes, and career longevity, as well as stronger advanced metrics such as Win Shares (WS) and Value Over Replacement Player (VORP). The most significant drop in performance occurs within the first round, where production and longevity decline sharply from early-lottery to late-first-round picks.  
 Beyond the 30th pick, player outcomes continue to fall, though the differences between later selections become smaller. Overall, the results confirm that while early picks generally deliver higher value and longer careers, exceptional players can still emerge from any part of the draft, reflecting both the unpredictability and opportunity inherent in the selection process.
 
-Key takeaway: While higher draft selections offer greater average returns, identifying undervalued talent in later rounds remains a crucial edge for successful team building.
+In addition, year-by-year correlation trends between draft rank and both WS and VORP show no significant long-term directional shifts, suggesting that the draft market has remained relatively efficient over the past three decades. Furthermore, the strong and stable positive correlation between WS and VORP (r ≈ 0.85–0.95 annually) reinforces their reliability as complementary indicators of player value.
+
+Key takeaway: While higher draft selections offer greater average returns, identifying undervalued talent in later rounds remains a crucial edge for successful team building. At the same time, the consistency of market efficiency and metric alignment underscores the importance of robust scouting and contextual evaluation beyond raw draft position.
+
 
 ## Limitations and Extensions of Analysis
 ### Limitation of Our Analysis  
