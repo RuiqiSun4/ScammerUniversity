@@ -145,6 +145,7 @@ Running (`analysis/averages_by_pick.py`) will generate an additional CSV file, (
 To get a scatter plot and regression results (`analysis/results/ws_pick/ws_pick.png`, `ws_pick.txt`), rerun `analysis/ws_pick.py`.  
 To get a yearly correlation trend plot and regression results (`analysis/results/ws_pick/ws_pick_corr_trend.png`, `ws_pick_corr_by_year.csv`), rerun (`analysis/ws_pick_yearly.py`).  
 If you are intested in scatter plots and regression results in the extreme years in terms of correlation between Win shares and draft rank (`analysis/results/ws_pick/ws_pick_1996_with_stats.png`, `ws_pick_1986_with_stats.png`, `ws_pick_regression_1986_1996.txt`), rerun `analysis/ws_pick_plot_1986_1996.py`.
+To obtain data table results (`analysis/results/draft_pick_ranges_vs_win_shares.png`) rerun `ranges.py`
 
 [Part 3: VORP and draft rank]  
 
